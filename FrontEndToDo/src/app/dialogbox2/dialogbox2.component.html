@@ -1,0 +1,45 @@
+<div id="dialogBox">
+    <form id="form" [formGroup]="updateform" style="font-family: 'Times New Roman', Times, serif;">
+        <h1>UPDATE TASK DETAILS</h1>
+        <div hidden>
+            <label for="exampleInputUsername">ENTER TASK ID: </label>
+            <input type="number" class="form-control" placeholder="Enter Task ID" name="titleId"
+                [ngModel]=taskData.dataKey.taskId formControlName="taskId" required>
+        </div>
+        <div>
+            <label for="exampleInputUsername">ENTER TASK TITLE: </label>
+            <input type="text" class="form-control" placeholder="Enter Task Title" [(ngModel)]=taskData.dataKey.title
+                formControlName="title" required>
+        </div>
+        <label for="exampleInputUsername">ENTER DESCRIPTION: </label>
+        <textarea id="description" type="textarea" class="form-control" placeholder="Enter Description"
+            formControlName="description" [(ngModel)]=taskData.dataKey.description required></textarea>
+        <div>
+            <label for="exampleInputUsername">ENTER START DATE: </label>
+            <input type="date" class="form-control" placeholder="Enter Start Date" min="{{minDate}}"
+                [ngModel]=taskData.dataKey.startDate formControlName="startDate" required>
+        </div>
+        <div>
+            <label for="exampleInputUsername">ENTER END DATE: </label>
+            <input type="date" class="form-control" placeholder="Enter End date" min="{{minDate}}"
+                [ngModel]=taskData.dataKey.endDate formControlName="endDate" required>
+        </div><br>
+        <div>
+            <b> Select your Task PRIORITY </b>
+            <select style="color: black;" id="priority" [ngModel]=taskData.dataKey.priority formControlName="priority">
+                <option> LOW </option>
+                <option> MEDIUM </option>
+                <option> HIGH </option>
+            </select>
+        </div><br>
+        <div>
+            <label for="exampleInputUsername">ENTER TASK CATEGORY: </label>
+            <input type="text" class="form-control" placeholder="Enter CATEGORY" [ngModel]=taskData.dataKey.category
+                formControlName="category" required>
+        </div>
+        <button mat-raised-button class="btn btn-primary" (click)="updateTask(updateform.value,taskData.dataKey.taskId)"
+            mat-dialog-close>UPDATE</button>
+        <button style="margin-left:223px;" mat-raised-button class="btn btn-primary" mat-dialog-close>Discard
+            Changes</button>
+    </form>
+</div>

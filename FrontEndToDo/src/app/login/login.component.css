@@ -1,0 +1,77 @@
+#form
+{
+    margin-left: 12cm;
+    background-image:url(https://media3.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif);
+    width: 450px;
+    margin-top: 1cm;
+    height: 310px;
+    border-radius: 20px;
+    position: absolute;
+    right: 20%;
+    top: 15%;
+}
+
+#tag
+{
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2cm;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+}
+
+h6{
+    color: gainsboro;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    font-size: 0.5cm;
+}
+
+#heading
+{
+    font-size:1cm; 
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    top: 0.5cm;
+}
+
+label
+{
+    margin-left: 20px; 
+    font-size: 20px;
+}
+
+input{
+    width: 400px;
+    margin-left: 20px
+}
+
+#noaccount
+{
+    color: aliceblue; 
+    position: absolute;
+    right: 7%;
+    top: 4%;
+}
+
+#welcome
+{
+    margin-left: 160px; 
+    font-size: 30px;
+}
+
+#signUp
+{
+    position: absolute;
+    right: 3%;
+    top: 3.5%;
+}
+
+#registerButton
+{
+    margin-top: 10px;
+    font-size: small;
+}

@@ -1,0 +1,72 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  height: 100%;
+  
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#profile
+{
+  position: absolute;
+  right: 2%;
+}
+
+#notification
+{
+  position: absolute;
+  right: 5%;
+}
+
+#add
+{
+  position: absolute;
+  right: 8%;
+}
+
+#logo
+{
+  font-size: 1cm;
+  position: absolute;
+  left: 63px;
+  top: 20%;
+  color: white;
+}
+
+#app
+{
+  position: absolute;
+  left: 101px;
+  top: 20%;
+  color: white;
+}
+.sidenav-container{
+  /* background-image: url(https://th.bing.com/th/id/R.71da97160b8a15de4f769ef5c946b924?rik=v9mPbR4W3ieoWw&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f311977-abstract.jpg&ehk=6tUQa3h%2bBwrTI89RIXdsbOryEGqRprr5P2CTWeHOlfI%3d&risl=&pid=ImgRaw&r=0); */
+  background-position-x: right;
+  background-size: contain;
+  background-color: #0f0d0d;
+}
+.mat-toolbar.mat-primary {
+  background: #27274a;
+  color: #fff;
+}
+.footer{
+  background-color: #27274a;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  z-index: 100;
+  height: 25px;
+}

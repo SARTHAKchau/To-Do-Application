@@ -1,0 +1,17 @@
+<mat-icon id="archive">archive</mat-icon>
+<h1 id="tag">Your archived tasks appear here</h1>
+<mat-card style="background-color: #27274a;width: 450px;" class="example-card" *ngFor="let metadata of archiveTasks">
+    <mat-card-header>
+        <div mat-card-avatar><img src="https://media0.giphy.com/media/xTiQyMdjaA5YzqTkI0/giphy.gif" height="30px">
+        </div>
+        <mat-card-title>{{metadata.title}}</mat-card-title>
+        <mat-card-subtitle>DESCRIPTION : {{metadata.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <button style="margin-right:45px;" mat-button id="archiveButton" title="Move back from Archive"
+        (click)="moveToHome(metadata);delete(metadata.taskId)">
+        <mat-icon>archive</mat-icon>
+    </button>
+    <button mat-button id="delete" title="Delete" (click)="delete(metadata.taskId)">
+        <mat-icon>delete</mat-icon>
+    </button>
+</mat-card>

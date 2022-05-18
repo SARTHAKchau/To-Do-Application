@@ -1,0 +1,60 @@
+mat-card {
+    /* max-width: 250px; */
+    margin-left: 50px;
+    width: 262px;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 5%;
+
+}
+
+/* #AddTask
+{
+    margin-left: 45%;
+} */
+
+#close
+{
+    margin-left: 90%;
+}
+#form
+{
+    width: 400px;
+    margin-left: 300px;
+}
+
+input
+{
+    margin-bottom: 5px;
+}
+
+#dialogBox
+{
+    width: 400px; 
+    height:600px;
+    position: absolute;
+    left: 4%;
+}
+
+.high{
+    border-bottom:5px solid tomato;
+    /* color: red; */
+
+}
+.med{
+    border-bottom:5px solid #e6c300 ;
+    /* color :#36ab21 ; */
+}
+.low{
+    border-bottom:5px solid #8600b3 ;
+     /* color: #e6c300; */
+} 
+#matTabs{
+    color: black;
+}
+.mat-tab-label .mat-tab-label-content{
+    color: black;
+}
+.mat-tab-body .mat-tab-body-active{
+    z-index: 0;
+}

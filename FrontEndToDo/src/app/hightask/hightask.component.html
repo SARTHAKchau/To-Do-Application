@@ -1,0 +1,16 @@
+<h1 style="margin-left: 500px;">HIGH PRIORITY TASKS</h1>
+<mat-card class="card-footer" class="example-card" *ngFor="let metadata of Hightask">
+    <div>
+        <mat-card-header>
+            <div mat-card-avatar><img src="https://media0.giphy.com/media/xTiQyMdjaA5YzqTkI0/giphy.gif" height="30px">
+            </div>
+            <mat-icon *ngIf="metadata.priority == 'HIGH'" style="color:red ;">flag</mat-icon>
+            <mat-card-title>{{metadata.title}}</mat-card-title>
+            <mat-card-subtitle>PRIORITY : {{metadata.priority}}</mat-card-subtitle>
+            <mat-card-subtitle>{{metadata.endDate}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+        </mat-card-actions>
+        <hr *ngIf="metadata.priority == 'HIGH'" style="color:tomato ;height: 5px;">
+    </div>
+</mat-card>

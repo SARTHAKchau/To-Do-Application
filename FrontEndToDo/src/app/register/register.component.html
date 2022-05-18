@@ -1,0 +1,78 @@
+<body style="background-color: black;height: 660px;">
+    <div>
+        <h1 id="heading">TO DO APPLICATION</h1>
+    </div>
+
+    <img src="..\assets\34990951.jpg" height="608px">
+    <div>
+        <button class="btn btn-primary" id="login" routerLink="">LOGIN</button>
+        <h5>ALREADY HAVE ACCOUNT ?</h5>
+
+        <h1 id="tag">One app to <br><br> replace them all.</h1>
+        <h6>All of your work in one place...........</h6>
+    </div>
+    <div>
+        <form [formGroup]="addUser" id="form">
+            <h1 id="register">REGISTER HERE</h1>
+            <div>
+                <label for="exampleInputUsername">ENTER USER NAME : </label>
+                <input type="text" class="form-control" placeholder="Enter User Name" formControlName="username"
+                    required>
+                <div *ngIf="username.invalid && (username.dirty || username.touched)">
+                    <small class="text-danger"> User name is required</small>
+                </div>
+            </div>
+            <div>
+                <label for="exampleInputUsername">ENTER YOUR EMAIL ID : </label>
+                <input type="text" class="form-control" placeholder="Enter Email ID" formControlName="email" required>
+                <div *ngIf="email.invalid && (email.touched)">
+                    <small class="text-danger">Email is required</small>
+                </div>
+                <div *ngIf="email.errors?.['pattern']">
+                    <small class="text-danger">ENTER VALID EMAIL ID</small>
+                </div>
+            </div><br>
+
+            <div>
+                <label for="exampleInputPassword1">ENTER YOUR PASSWORD :
+                </label>
+                <input type="password" class="form-control" placeholder="Enter Your Password" formControlName="password"
+                    required>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <small class="text-danger">Password is required</small>
+                </div>
+                <div *ngIf="password.errors?.['pattern']">
+                    <small class="text-danger">Enter Password with 1Symbol,1Number & 6 Alphabets </small>
+                </div>
+            </div><br>
+
+            <div>
+                <label for="exampleInputPassword1">ENTER CONTACT NUMBER :
+                </label>
+                <input type="text" class="form-control" placeholder="Enter Your Contact Number"
+                    formControlName="contact" required>
+                <div *ngIf="contact.invalid &&(contact.dirty || contact.touched)">
+                    <small class="text-danger">Contact Number Password is required</small>
+                </div>
+                <div *ngIf="contact.errors?.['pattern']">
+                    <small class="text-danger">Enter Valid Mobile Number </small>
+                </div>
+            </div><br>
+
+            <div>
+                <label for="exampleInputPassword1">SELECT YOUR GENDER : </label>
+                <select style="color: #000000;width: 200px;margin-left: 20px;height: 25px;" formControlName="gender"
+                    required>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select>
+            </div><br>
+
+            <button style="margin-left: 25px;" type="submit" class="btn btn-primary" (click)="saveUser(addUser.value)"
+                [disabled]="addUser.invalid ">SIGN UP</button>
+            <br>
+            <label id="loginButton">HAVE ACCOUNT ?<a routerLink=""> LOGIN</a></label>
+        </form>
+    </div>
+    <router-outlet></router-outlet>
+</body>

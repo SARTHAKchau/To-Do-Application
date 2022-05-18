@@ -1,0 +1,75 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport fixedTopGap="65">
+    <mat-nav-list>
+      <button mat-button routerLink="tasks">
+        <mat-toolbar>
+          <mat-icon>task</mat-icon> Tasks
+        </mat-toolbar>
+      </button>
+      <button mat-button routerLink="archive">
+        <mat-toolbar>
+          <mat-icon>archive</mat-icon> Archive
+        </mat-toolbar>
+      </button>
+      <hr>
+      <button mat-button routerLink="hightask">
+        <mat-toolbar>
+          High Priority<mat-icon style="color: red;">flag</mat-icon>
+        </mat-toolbar>
+      </button>
+      <button mat-button routerLink="mediumtask">
+        <mat-toolbar>
+          Medium Priority<mat-icon style="color: yellow;">flag</mat-icon>
+        </mat-toolbar>
+      </button>
+      <button mat-button routerLink="lowtask">
+        <mat-toolbar>
+          Low Priority<mat-icon style="color: aqua;">flag</mat-icon>
+        </mat-toolbar>
+      </button>
+      <hr>
+      <button mat-button routerLink="category">
+        <mat-toolbar>
+          <mat-icon style="margin-right:10px;">search</mat-icon>SearchByCategory
+        </mat-toolbar>
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="z-index: 100;" color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="tasks">
+        <mat-icon id="logo">assignment</mat-icon>
+        <span id="app">TO DO
+        </span>
+      </a>
+      <h1 style="margin-left: 600px;">WELCOME {{username}}</h1>
+      <button style="position:absolute ;right:100px" routerLink="notification" mat-button title="Notifications"
+        id="notification">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <div *ngIf=retrievedImage>
+        <img class="rounded-circle" style="position: absolute;width: 56px;    top: 2px;
+        right: -5px;" [src]="retrievedImage">
+      </div>
+      <button title="HELLO {{username}}" id="profile" mat-button [matMenuTriggerFor]="menu">
+        <span style="margin-right:10px ;">Account</span>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="editprofile">Edit Profile</button>
+          <button mat-menu-item (click)="logout()">Log Out</button>
+        </mat-menu>
+
+      </button>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <div class="footer">
+      <footer class="page-footer font-small">
+        <div class="footer-copyright text-white text-center py-3" style="margin-top: -8px;">© 2022 Copyright :
+          To-do-Application</div>
+      </footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

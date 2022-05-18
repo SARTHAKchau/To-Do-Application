@@ -1,0 +1,11 @@
+<h1 style="text-align: center;">NOTIFICATIONS</h1>
+<mat-card class="example-card" *ngFor="let data of results">
+    <mat-card-header>
+        <div mat-card-avatar><img src="https://media0.giphy.com/media/xTiQyMdjaA5YzqTkI0/giphy.gif" height="30px">
+        </div>
+        <mat-card-title>TITLE : {{data.title}}</mat-card-title>
+        <mat-card-subtitle>STATUS : {{data[0].message}}</mat-card-subtitle>
+        <mat-icon *ngIf="data[0].message=='TASK DONE'" style="color: green;">done_all</mat-icon>
+        <mat-icon *ngIf="data[0].message=='TASK ABOUT TO END'" style="color: yellow;">warning</mat-icon>
+    </mat-card-header>
+</mat-card>

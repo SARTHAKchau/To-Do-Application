@@ -1,0 +1,17 @@
+.example-card{
+    /* background-color: #27274a; */
+    width: 193px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    width: max-content;
+}
+mat-card {
+    /* max-width: 400px;
+    margin-left: 50px;
+    width: 370px;
+    margin-top: 15px; */
+    display: inline-block;
+    border-radius: 5%;
+
+}

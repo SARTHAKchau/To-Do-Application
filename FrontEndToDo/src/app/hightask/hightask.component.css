@@ -1,0 +1,9 @@
+mat-card {
+    /* max-width: 250px; */
+    margin-left: 50px;
+    width: 262px;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 5%;
+
+}

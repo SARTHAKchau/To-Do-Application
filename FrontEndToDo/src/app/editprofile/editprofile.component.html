@@ -1,0 +1,42 @@
+<div style="margin-left:500px ; height: 800px;">
+    <h1>EDIT USER DETAILS</h1>
+    <div>
+        <img style="width: 300px;" class="rounded-circle" [src]="url">
+        <input type="file" class="btn btn-success" (change)="selectFile($event)">
+
+    </div>
+    <br>
+    <div>
+        <form [formGroup]="addUser" style="font-family: 'Times New Roman', Times, serif;width: fit-content;" id="form">
+
+            <div hidden>
+                <input type="number" [ngModel]="user.username" formControlName="username" readonly>
+            </div>
+            <h1>UserName : {{user.username}}</h1>
+            <div>
+                <label for="exampleInputUsername">EDIT EMAIL ID :</label>
+                <input type="text" placeholder="Enter Task Title" [(ngModel)]="user.email" formControlName="email"
+                    class="form-control" required>
+            </div>
+            <br>
+            <div>
+                <label>EDIT GENDER : </label>
+                <select style="color: #000000;width: 200px;margin-left: 20px;height: 25px;" formControlName="gender"
+                    [ngModel]="user.gender" required>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="exampleInputUsername"> EDIT MOBILE NUMBER : </label>
+                <input type="number" class="form-control" [ngModel]="user.contact" formControlName="contact" required>
+            </div>
+            <div hidden>
+                <input type="text" class="form-control" [ngModel]="user.password" formControlName="password" required>
+            </div><br>
+            <button mat-raised-button class="btn btn-primary"
+                (click)="saveForm(addUser.value);updateImage()">UPDATE</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+mat-card {
+    width: 20cm;
+    margin-left: 50px;
+    margin-top: 15px;
+    display: inline-block;
+    
+}
+
+#archiveButton
+{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+
+}
+
+#delete
+{
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+#archive
+{
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    font-size: 3cm;
+    color: grey
+}
+
+#tag
+{
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+}

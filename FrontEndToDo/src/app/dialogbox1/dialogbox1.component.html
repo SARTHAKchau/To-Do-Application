@@ -1,0 +1,32 @@
+<form id="form" [formGroup]="taskform">
+    <h1>Enter Task Details</h1>
+    <div>
+        <input type="text" class="form-control" placeholder="Enter Task Title" formControlName="title" required>
+    </div><br>
+    <textarea id="description" type="textarea" class="form-control" placeholder="Enter Description"
+        formControlName="description" required></textarea>
+    <div><br>
+        <label for="exampleInputUsername">ENTER START DATE: </label>
+        <input style="width: 190px;" type="date" class="form-control" placeholder="Enter Start Date"
+            formControlName="startDate" min="{{minDate}}" required>
+    </div><br>
+    <div>
+        <label style=" left: 60%; top: 43%;" for="exampleInputUsername">ENTER END DATE: </label>
+        <input style="width: 190px; left: 60%; top: 46%;" type="date" class="form-control" placeholder="Enter End date"
+            formControlName="endDate" min="{{minDate}}" required>
+    </div><br>
+    <div>
+        <label> Select your Task PRIORITY : </label>
+        <select style="width: 190px;margin-left: 10px ; color: black;" id="priority" class="dropdown"
+            formControlName="priority" required>
+            <option> LOW </option>
+            <option> MEDIUM </option>
+            <option> HIGH </option>
+        </select>
+    </div><br>
+    <div>
+        <input type="text" class="form-control" placeholder="Enter CATEGORY" formControlName="category" required>
+    </div><br>
+    <button mat-raised-button class="btn btn-primary" [disabled]="taskform.invalid" (click)="saveTask(taskform.value);"
+        mat-dialog-close>SUBMIT</button>
+</form>

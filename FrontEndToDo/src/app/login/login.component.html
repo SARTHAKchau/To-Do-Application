@@ -1,0 +1,44 @@
+<body style="background-color: black; height: 690px;">
+
+  <div>
+    <h1 id="heading">TO DO APPLICATION</h1>
+  </div>
+  <img src="..\assets\34990951.jpg" height="608px">
+  <button class="btn btn-primary" id="signUp" (click)="signUp()" routerLink="register">SIGN UP</button>
+  <h5 id="noaccount">DON'T HAVE ACCOUNT ?</h5>
+
+  <h1 id="tag">One app to <br><br> replace them all.</h1>
+  <h6>All of your work in one place...........</h6>
+  <form [formGroup]="addUser" id="form">
+    <label id="welcome">LOGIN</label>
+    <div>
+      <label for="exampleInputUsername">User Name : </label>
+      <input type="text" class="form-control" id="exampleInputUsername" placeholder="Enter Your UserName"
+        formControlName="username" required>
+      <div *ngIf="username.invalid && (username.dirty || username.touched)"
+        style="width: 13cm; margin-left: 20px; height: 5px;">
+        <small class="text-danger" *ngIf="username.errors?.['required']">
+          username is required
+        </small>
+      </div>
+    </div><br>
+    <div>
+      <label for="exampleInputPassword1">Password : </label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password"
+        formControlName="password" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+        style="width: 13cm;margin-left: 20px; height: 5px;">
+        <small *ngIf="password.errors?.['required']" class="text-danger">
+          Password is required
+        </small>
+      </div>
+    </div><br>
+
+    <button style="margin-left: 120px;" type="submit" class="btn btn-primary" [disabled]="addUser.invalid "
+      (click)="login(addUser.value);">LOGIN</button>
+    <br>
+    <label id="registerButton">DON'T HAVE ACCOUNT ?<a style="color: blue; cursor: pointer;"
+        (click)="signUp()">SIGNUP</a></label>
+  </form>
+  <router-outlet></router-outlet>
+</body>

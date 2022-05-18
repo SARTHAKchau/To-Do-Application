@@ -1,0 +1,87 @@
+
+#form
+{
+    margin-left: 12cm;
+    background-image:url(https://media3.giphy.com/media/FyoaJE2iah7WYeyxWr/giphy.gif);
+    width: 450px;
+    height: 520px;
+    border-radius: 20px;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+#register{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input
+{
+    width: 400px; 
+    margin-left: 20px;
+}
+
+label{
+    font-size: 15px;
+    margin-left: 22px;
+}
+
+mat-select{
+    width: 400px; 
+    margin-left: 20px;
+
+}
+
+#loginButton
+{
+    margin-top: 10px;
+    font-size: small;
+}
+
+#heading
+{
+    font-size:1cm; 
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    top: 0.5cm;
+}
+
+#tag
+{
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2cm;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+}
+.text-danger
+{
+    width: 13cm; 
+    height:5px; 
+    margin-left: 20px;
+}
+
+h5{
+    color: aliceblue; 
+    position: absolute;
+    right: 7%;
+    top: 4%;
+}
+
+#login
+{
+    position: absolute;
+    right: 3%;
+    top: 3.5%;
+}
+
+h6{
+    color: gainsboro;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    font-size: 0.5cm;
+}

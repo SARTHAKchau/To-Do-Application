@@ -1,0 +1,6 @@
+<div style="margin-left:50px" *ngFor="let data of results">
+    <span>TITLE : {{data.title}}</span> <br>
+    <span>STATUS : {{data[0].message}} <mat-icon *ngIf="data[0].message=='TASK ABOUT TO END'" style="color: red;">
+            warning</mat-icon></span><br>
+    <br>
+</div>
